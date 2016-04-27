@@ -1,25 +1,98 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ConversionApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="iConvert" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vml-L7-1im">
+                                <rect key="frame" x="78" y="28" width="164" height="50"/>
+                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="164" id="SVS-ba-zfS"/>
+                                    <constraint firstAttribute="width" constant="164" id="Wpx-lO-PmI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter temperature in Celsius" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dps-z3-7ez">
+                                <rect key="frame" x="36" y="107" width="248" height="33"/>
+                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="248" id="TBH-MR-nUJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqQ-V2-9Nv">
+                                <rect key="frame" x="96" y="269" width="129" height="37"/>
+                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="w6X-MM-svv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="26"/>
+                                <state key="normal" title="Convert"/>
+                                <connections>
+                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QpV-Kp-QwI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Degrees Fahrenheit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqB-f3-DVH">
+                                <rect key="frame" x="51" y="379" width="218" height="39"/>
+                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="218" id="suh-Yr-SNw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Example: 10" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ysK-WM-pLs">
+                                <rect key="frame" x="81" y="190" width="159" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="FCj-7i-R5B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ysK-WM-pLs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Mn-3S-Nbn"/>
+                            <constraint firstItem="UqB-f3-DVH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A3w-3I-yUm"/>
+                            <constraint firstItem="vml-L7-1im" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Hb6-ab-V8s"/>
+                            <constraint firstItem="hqQ-V2-9Nv" firstAttribute="top" secondItem="ysK-WM-pLs" secondAttribute="bottom" constant="51" id="HyY-D4-vHX"/>
+                            <constraint firstItem="hqQ-V2-9Nv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PpE-ch-PJT"/>
+                            <constraint firstItem="dps-z3-7ez" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T3X-lE-iRa"/>
+                            <constraint firstItem="vml-L7-1im" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qxG-ib-w6G"/>
+                            <constraint firstItem="UqB-f3-DVH" firstAttribute="top" secondItem="hqQ-V2-9Nv" secondAttribute="bottom" constant="73" id="tO2-2y-aPH"/>
+                            <constraint firstItem="UqB-f3-DVH" firstAttribute="top" secondItem="hqQ-V2-9Nv" secondAttribute="bottom" constant="73" id="tcf-nY-MU5"/>
+                            <constraint firstItem="dps-z3-7ez" firstAttribute="top" secondItem="vml-L7-1im" secondAttribute="bottom" constant="29" id="ubC-rj-Awf"/>
+                            <constraint firstItem="ysK-WM-pLs" firstAttribute="top" secondItem="dps-z3-7ez" secondAttribute="bottom" constant="48" id="wyM-KJ-Rwt"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="celsiusValue" destination="ysK-WM-pLs" id="eLw-1W-8tp"/>
+                        <outlet property="fahValue" destination="UqB-f3-DVH" id="mlj-JR-zLe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="237"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
 </document>
